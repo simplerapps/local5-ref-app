@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<!-- 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	
+	<meta name="description" content="Sharing ten favorite things in any subject">
+	<meta name="keywords" content="share10, s10, share ten">
+
+    <title>Local5</title> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <script src="../lib/jquery/jquery-1.11.1.min.js"></script>  
+    <script src="../lib/misc/hammer.min.js"></script>
+    <script src="../lib/misc/jquery.hammer.js"></script>
+    
+    <link href="../lib/misc/slick.css" rel="stylesheet" >
+    <script src="../lib/misc/slick.min.js"></script>
+    
+    <!-- Bootstrap -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- cropper -->    
+    <link href="../lib/cropper/cropper.min.css" rel="stylesheet" >
+    <script src="../lib/cropper/cropper.min.js"></script>
+    
+    <!-- Misc Libraries -->
+    <script src='../lib/misc/fastclick.min.js'></script> 
+    <script src='../lib/misc/inobounce.min.js'></script>
+    
+    <!-- SA Libs -->
+ 	<script src="../lib/sa/sa.min.js"></script>    
+    <link  href="../lib/sa/sa.comp.css" rel="stylesheet" >
+
+	<!-- Components source -->
+	<script src="../lib/app/app.min.js"></script>
+	
+	<script src="UploadBrowser2.js"></script>
+	
+</head>
+
+<body>
+	<!--       
+	<script>
+	$(function() {
+		// attach fastclick to document          
+    	FastClick.attach(document.body);    	
+	});
+    </script>
+    -->
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#page-flippers').slick({
+				infinite: false,
+				speed: 200,
+				arrows: false
+  			});
+		});	
+	</script>
+
+	
+	<div id="page-flippers" class="test-class" >
+	</div>
+
+	<div>
+	<br><br>
+	<p onclick="addPage()">Add Page</p>
+	<p onclick="remPage()">Rem Page</p>
+	</div>	
+	
+	<script>
+	    var pageIdx = 0;
+		function addPage(x) 
+		{
+		    console.log ( 'add page: ' + pageIdx ); 
+    		var html = 
+    		
+    		'<div style="padding:10px" ><h2>Sample My Title '+ pageIdx + ' Here!</h2>'+
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' ;
+			    		    
+    		for (var j=0; j<pageIdx; j++ ) {
+    		    html += '<p>Another added line number ' + pageIdx + '</p>';
+    		}    
+    		    
+    		html += '</div>';
+    		$('#page-flippers').slick ( 'slickAdd', html );
+    		pageIdx++;
+  		};
+  		
+  		function remPage(x) 
+		{
+			pageIdx--;
+			$('#page-flippers').slick ( 'slickRemove', pageIdx );
+		};
+	</script>
+
+
+	<!-- Pages
+	<div id="page" style="width:100%; margin: 0 auto;" ></div>	 
+	-->
+		
+</body>
+
+</html>

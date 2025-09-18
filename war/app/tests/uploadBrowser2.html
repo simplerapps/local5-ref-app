@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<!-- 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	
+	<meta name="description" content="Sharing ten favorite things in any subject">
+	<meta name="keywords" content="share10, s10, share ten">
+
+    <title>Local5</title> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <script src="../lib/jquery/jquery-1.11.1.min.js"></script>  
+    <script src="../lib/misc/hammer.min.js"></script>
+    <script src="../lib/misc/jquery.hammer.js"></script>
+    
+    <!-- Bootstrap -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- cropper -->    
+    <link href="../lib/cropper/cropper.min.css" rel="stylesheet" >
+    <script src="../lib/cropper/cropper.min.js"></script>
+    
+    <!-- Misc Libraries -->
+    <script src='../lib/misc/fastclick.min.js'></script> 
+    <script src='../lib/misc/inobounce.min.js'></script>
+    
+    <!-- SA Libs -->
+ 	<script src="../lib/sa/sa.min.js"></script>    
+    <link  href="../lib/sa/sa.comp.css" rel="stylesheet" >
+
+	<!-- Components source -->
+	<script src="../lib/app/app.min.js"></script>
+	
+	<script src="UploadBrowser2.js"></script>
+	
+	<!-- set cropper recommended styles -->
+ 	<style>
+    	.container {
+      		max-width: 960px;
+    	}
+    	img {
+      		max-width: 100%;
+    	}
+  </style>	
+</head>
+
+<body>      
+	<script>
+	$(function() {
+		// attach fastclick to document          
+    	FastClick.attach(document.body);    	
+	});
+    </script>
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// load the main app and bind all its UI to the element with "page" id
+			SA.loadComponent ( 'page', 'App.UploadBrowser2', {prefWidth:325, prefHeight:280} );
+		});	
+	</script>
+
+
+	<!-- Pages -->
+	<div style="position:relative" >
+		<div id="page" style="width:100%; margin: 0 auto; " ></div>  
+	</div>
+	
+	<div style="position:relative" >
+		<p>This is footer line </p>
+		<p>This is footer line </p>
+		<p>This is footer line </p>
+	</div>
+	
+	<!-- cropper test 
+	<div class="container">
+    	<h1 class="page-header">Cropper Test</h1>
+    	<div>
+      		<img id="image" src="../res/gallery/cs.jpg" alt="Picture">
+    	</div>
+  	</div>
+  	
+	<script>
+	//$(function () {
+      $('#image').cropper({
+        viewMode: 3,
+        dragMode: 'move',
+        autoCropArea: 1,
+        restore: false,
+        modal: false,
+        guides: false,
+        highlight: false,
+        cropBoxMovable: false,
+        cropBoxResizable: false
+      });
+	//}); 
+	</script> 	
+	-->
+
+		
+</body>
+
+</html>

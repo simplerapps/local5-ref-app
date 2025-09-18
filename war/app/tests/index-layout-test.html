@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta http-equiv="Content-Security-Policy" 
+		content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no">	
+	<meta name="description" content="Local5 business to users communications app">
+	<meta name="keywords" content="local5, local five">
+
+    <title>Local5</title> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <script src="app/lib/jquery/jquery-1.11.1.min.js"></script>  
+    <script src="app/lib/jquery/jquery.textarea_autosize.min.js"></script>
+    
+    <script src="app/lib/misc/hammer.min.js"></script>
+    <script src="app/lib/misc/jquery.hammer.js"></script>
+    
+    <!-- Bootstrap -->
+    <link href="app/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="app/lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- cropper -->    
+    <link href="app/lib/cropper/cropper.min.css" rel="stylesheet" >
+    <script src="app/lib/cropper/cropper.min.js"></script>
+    
+    <!-- Misc Libraries -->
+    <script src='app/lib/misc/fastclick.min.js'></script>
+	<!-- <script src='app/lib/misc/inobounce.min.js'></script> -->  
+    
+    <!-- Slick slider -->
+    <link href="app/lib/misc/slick.css" rel="stylesheet" >
+    <script src="app/lib/misc/slick.min.js"></script>
+    
+    <!-- SA Libs -->
+ 	<script src="app/lib/sa/sa.min.js"></script>    
+    <link  href="app/lib/sa/sa.comp.css" rel="stylesheet" >
+
+	<!-- Application source -->
+	<script src="app/lib/app/app.min.js"></script>
+	
+	<style>
+		body, html 
+		{
+			height:100%;
+			overflow: hidden;
+		}
+		.scroller 
+		{
+			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+		.header
+		{
+			height: 65px;
+			width: 100%;
+			background-color:gray; 
+			position:absolute;
+			z-index: 100;
+			top:0px;
+			left: 0px;
+			text-align:center;
+			color: #f2f2f2;
+		}
+		.content
+		{
+			padding-top:65px;
+			height: 100%;
+			width:100%;
+			background-color:#f3f3f3;
+		}
+	</style>   
+</head>
+
+<body>      
+	<script>
+	$(function() {
+		// attach fastclick to document          
+    	FastClick.attach(document.body);    	
+	});
+    </script>
+    
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$('#page-flip2').slick({
+				infinite: false,
+				speed: 200,
+				arrows: false,
+				adaptiveHeight: true
+  			});
+  			
+  			$('#page-flip2').on('swipe', function(event, slick, direction) {
+				var idx = $('#page-flip2').slick('slickCurrentSlide');
+				$('#header-flip2').slick ('slickGoTo', idx );
+			});
+  			
+  			$('#header-flip2').slick({
+				infinite: false,
+				fade: true,
+				speed: 500,
+				arrows: false,
+				cssEase: 'linear'
+  			});
+		});	
+	</script>
+	
+	<!-- Header Level -->
+		<div id="header-flip2" class="header" >
+			<div><h3>Header ONE I</h3></div>
+			<div><h3>Header TWO II</h3></div>
+		</div>
+	
+		<!-- Page Level -->
+		<div class="content scroller"  id="page-flip2"  style="border:1px dashed gray;" >
+			<div style="margin:5px;">
+				<h2>THIS IS PAGE ONE</h2>
+				<p>Gamma Gallery is an experimental responsive image gallery that attempts to provide an adjustable responsive images approach taking its grid layout and the full slideshow view into account.</p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>			
+				<h2>LAST LINE PAGE1</h2>
+			</div>
+		
+			<div style="margin:5px;">
+				<h2>THIS IS PAGE TWO</h2>
+				<p>A tutorial on how to create a responsive vertical fullscreen slider that moves its sections in opposite directions. We’ll be using jQuery, CSS Transitions and media queries to make the layout adaptive.</p>
+				<p>A tutorial on how to create a responsive vertical fullscreen slider that moves its sections in opposite directions. We’ll be using jQuery, CSS Transitions and media queries to make the layout adaptive.</p>
+				<p>A tutorial on how to create a responsive vertical fullscreen slider that moves its sections in opposite directions. We’ll be using jQuery, CSS Transitions and media queries to make the layout adaptive.</p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>
+				<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>									
+				<h2>LAST LINE PAGE2</h2>		
+			</div>
+		</div>
+
+	
+	<div id="page-flippers" class="test-class" >
+	</div>
+
+	<div>
+	<br><br>
+	<p onclick="addPage()">ADD</p>
+	<p onclick="remPage()">REMOVE</p>
+	</div>	
+	
+	<script>
+	    var pageIdx = 0;
+		function addPage(x) 
+		{
+		    console.log ( 'add page: ' + pageIdx ); 
+    		var html = 
+    		
+    		'<div style="padding:10px" ><h2>Sample My Title '+ pageIdx + ' Here!</h2>'+
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' +
+    		'<p>Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! Sample page content goes here!! </p>' ;
+			    		    
+    		for (var j=0; j<pageIdx; j++ ) {
+    		    html += '<p>Another added line number ' + pageIdx + '</p>';
+    		}    
+    		    
+    		html += '</div>';
+    		$('#page-flippers').slick ( 'slickAdd', html );
+    		pageIdx++;
+  		};
+  		
+  		function remPage(x) 
+		{
+			pageIdx--;
+			$('#page-flippers').slick ( 'slickRemove', pageIdx );
+		};
+	</script>
+		
+</body>
+
+</html>

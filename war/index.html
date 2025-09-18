@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=2"> -->
+	
+	<meta name="description" content="Top ten favorite things in any subject">
+	<meta name="keywords" content="top ten faves, top 10">
+
+    <title>Local5</title> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+   	<!-- JQuery: main jquery lib -->
+    <script src="app/lib/jquery/jquery-1.11.1.min.js"></script>
+    <script src="app/lib/jquery/jquery.textarea_autosize.min.js"></script>
+      
+    <script src="app/lib/misc/hammer.min.js"></script>
+    <script src="app/lib/misc/jquery.hammer.js"></script>
+    
+    <!-- Bootstrap -->
+    <link href="app/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="app/lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- cropper -->    
+    <link href="app/lib/cropper/cropper.min.css" rel="stylesheet" >
+    <script src="app/lib/cropper/cropper.min.js"></script>
+    
+    <!-- Misc Libraries -->
+    <script src='app/lib/misc/fastclick.min.js'></script>
+    <script src='app/lib/misc/inobounce.min.js'></script>
+    
+	<link href="app/lib/misc/slick.css" rel="stylesheet" >
+    <script src="app/lib/misc/slick.min.js"></script>
+    
+    
+    <!-- SA Libs -->
+ 	<script src="app/lib/sa/sa.js"> </script>    
+    <link  href="app/lib/sa/sa.comp.css" rel="stylesheet" >
+    
+	<!-- Application source -->
+	<script type="text/javascript" src="app/comp/MainApp.js"></script>
+	<script type="text/javascript" src="app/comp/Intro.js"></script>
+	<script type="text/javascript" src="app/comp/Banner.js"></script>
+	<script type="text/javascript" src="app/comp/Home.js"></script>	
+	<script type="text/javascript" src="app/comp/Login.js"></script>
+	<script type="text/javascript" src="app/comp/Heading.js"></script>
+	<script type="text/javascript" src="app/comp/Util.js"></script>	
+	<script type="text/javascript" src="app/comp/Feedback.js"></script>	
+	
+	<!-- data -->
+	<script type="text/javascript" src="app/comp/data/DataManager.js"></script>
+	
+	<!-- admin -->
+	<script type="text/javascript" src="app/comp/admin/SvcAdmin.js"></script>
+	<script type="text/javascript" src="app/comp/admin/UserAdmin.js"></script>
+	<script type="text/javascript" src="app/comp/admin/FlexAdmin.js"></script>
+	
+	<!-- svc -->
+	<script type="text/javascript" src="app/comp/svc/MappList.js"></script>
+	<script type="text/javascript" src="app/comp/svc/SvcSearch.js"></script>
+	<script type="text/javascript" src="app/comp/svc/Service.js"></script>
+	<script type="text/javascript" src="app/comp/svc/SvcHome.js"></script>
+	<script type="text/javascript" src="app/comp/svc/SvcTabs.js"></script>
+	<script type="text/javascript" src="app/comp/svc/QRManager.js"></script>
+	
+	<!-- svcomp -->
+	<script type="text/javascript" src="app/comp/svcomp/Proto.js"></script>
+	<script type="text/javascript" src="app/comp/svcomp/Comm.js"></script>
+	<script type="text/javascript" src="app/comp/svcomp/PostUI.js"></script>
+	<script type="text/javascript" src="app/comp/svcomp/PostView.js"></script>
+
+	<!-- ui -->	
+	<script type="text/javascript" src="app/comp/ui/PageFlip.js"></script>
+	<script type="text/javascript" src="app/comp/ui/SlickFlip.js"></script>
+	
+	<script type="text/javascript" src="app/comp/ui/ButSmpl.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Button.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/ButtonYN.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/EnumField.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Variable.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Message.js"></script>
+	<script type="text/javascript" src="app/comp/ui/TextArea.js"></script>
+	<script type="text/javascript" src="app/comp/ui/TextField.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Loading.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Dialog.js"></script>
+	<script type="text/javascript" src="app/comp/ui/FormHandler.js"></script>
+	<script type="text/javascript" src="app/comp/ui/DlgHelper.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/LinkFrame.js"></script>	
+	<script type="text/javascript" src="app/comp/ui/UploadSmpl.js"></script>
+	<script type="text/javascript" src="app/comp/ui/Circles.js"></script>
+</head>
+
+<body>       
+	<script>
+	$(function() {
+		// attach fastclick to document          
+    	FastClick.attach(document.body);    	
+	});
+    </script>
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// load the main app and bind all its UI to the element with "page" id
+			SA.loadComponent ( 'page', 'App.MainApp', {headerDivId:'header'} );
+		});			
+	</script>
+
+	<!-- Pages -->
+	<div id="header"></div>
+	<div id="page" class="page-content" ></div>
+	
+</body>
+</html>

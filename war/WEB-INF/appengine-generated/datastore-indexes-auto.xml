@@ -1,0 +1,11 @@
+<!-- Indices written at Wed, 17 Aug 2016 16:53:04 PDT -->
+
+<datastore-indexes>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Post" ancestor="false" source="auto">
+        <property name="serviceId" direction="asc"/>
+        <property name="modified" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>

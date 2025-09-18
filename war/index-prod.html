@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta http-equiv="Content-Security-Policy" 
+		content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no">	
+	<meta name="description" content="Local5 business to users communications app">
+	<meta name="keywords" content="local5, local five">
+
+    <title>Local5</title> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <script src="app/lib/jquery/jquery-1.11.1.min.js"></script>  
+    <script src="app/lib/jquery/jquery.textarea_autosize.min.js"></script>
+    
+    <script src="app/lib/misc/hammer.min.js"></script>
+    <script src="app/lib/misc/jquery.hammer.js"></script>
+    
+    <!-- Bootstrap -->
+    <link href="app/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="app/lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- cropper -->    
+    <link href="app/lib/cropper/cropper.min.css" rel="stylesheet" >
+    <script src="app/lib/cropper/cropper.min.js"></script>
+    
+    <!-- Misc Libraries -->
+    <script src='app/lib/misc/fastclick.min.js'></script>
+    <script src='app/lib/misc/inobounce.min.js'></script>
+    
+    <!-- Slick slider -->
+    <link href="app/lib/misc/slick.css" rel="stylesheet" >
+    <script src="app/lib/misc/slick.min.js"></script>
+    
+    <!-- SA Libs -->
+ 	<script src="app/lib/sa/sa.min.js"></script>    
+    <link  href="app/lib/sa/sa.comp.css" rel="stylesheet" >
+
+	<!-- Application source -->
+	<script src="app/lib/app/app.min.js"></script>
+</head>
+
+<body>      
+	<script>
+	$(function() {
+		// attach fastclick to document          
+    	FastClick.attach(document.body);    	
+	});
+    </script>
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// load the main app and bind all its UI to the element with "page" id
+			SA.loadComponent ( 'page', 'App.MainApp', {headerDivId:'header'} );
+		});
+	</script>
+
+
+	<!-- Pages --> 
+	<div id="header"></div>
+	<div id="page" class="page-content" ></div>
+	
+	<!-- CORDOVA ONLY: load phonegap and plugins and require.js -->
+	<script type="text/javascript" src="cordova.js"></script>
+</body>
+
+</html>
