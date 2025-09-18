@@ -1,5 +1,7 @@
 ## Local5 Reference App
       
+Local5 app is designed to help small businesses create a small app (AKA micro app) that lives within Local5 to promote affinity with their customers. 
+
 You can run the Local5 ref app here (note that it is made to run on a mobile device form factor)
 https://local5service.appspot.com/
 
